@@ -89,7 +89,7 @@ nav {
 	a{
 		font-size:12px;
 		font-weight: bold;
-		margin:10px 25px;
+		margin:15px 25px;
 		color:#fff;
 		text-decoration: none;
 	}
