@@ -4,6 +4,7 @@
 	 <About/>
 	 <News/>
 	 <latest-videos/>
+	 <comics-section/>
   </div>
 </template>
 
