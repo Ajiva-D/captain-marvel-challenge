@@ -3,6 +3,7 @@
    <Hero/>
 	 <About/>
 	 <News/>
+	 <latest-videos/>
   </div>
 </template>
 

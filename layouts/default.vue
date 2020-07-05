@@ -68,6 +68,9 @@ h6 {
 	&-grey{
 			color:#999;
 	}
+	&-red{
+		color:#e62429;
+	}
 }
 
 /* backgrounds */

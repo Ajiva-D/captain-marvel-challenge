@@ -48,6 +48,7 @@ export default {
 	padding-bottom: 40px;
 	&-body{
 		display: flex;
+		flex-wrap: wrap;
 		padding-top:10px;
 	}
 	&-card{
