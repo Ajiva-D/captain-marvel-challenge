@@ -35,7 +35,8 @@ export default {
   ** https://nuxtjs.org/guide/plugins
   */
   plugins: [
-		'~/plugins/fontawesome.js'
+		'~/plugins/fontawesome.js',
+		'~/plugins/axios.js'
   ],
   /*
   ** Auto import components
@@ -51,7 +52,11 @@ export default {
   ** Nuxt.js modules
   */
   modules: [
-  ],
+		'@nuxtjs/axios',
+	],
+	axios:{
+		baseURL: 'https://gateway.marvel.com:443/v1/public/',
+	},
   /*
   ** Build configuration
   ** See https://nuxtjs.org/api/configuration-build/

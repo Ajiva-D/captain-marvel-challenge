@@ -14,7 +14,16 @@ Ms. Marvel (1977) #1</p>
 
 <script>
 export default {
-
+methods:{
+	async getCharacter(){
+		let res = await this.$axios.$get('character/1009261')
+		console.log(res.data);
+		
+	}
+},
+mounted(){
+	this.getCharacter()
+}
 }
 </script>
 
