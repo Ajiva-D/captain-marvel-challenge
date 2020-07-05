@@ -45,6 +45,9 @@ h1 {
 h2 {
   font-size: 34px;
 }
+h3{
+	font-size:26px
+}
 h6 {
   font-size: 15px;
 }
@@ -55,6 +58,16 @@ h6 {
   &-small {
     font-size: 15px;
   }
+	&-bold{
+		font-weight: bold;
+	}
+	/* Text color */
+	&-white{
+		color:#fff;
+	}
+	&-grey{
+			color:#999;
+	}
 }
 
 /* backgrounds */

@@ -2,6 +2,7 @@
   <div>
    <Hero/>
 	 <About/>
+	 <News/>
   </div>
 </template>
 
