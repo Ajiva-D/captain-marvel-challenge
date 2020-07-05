@@ -5,6 +5,8 @@
 	 <News/>
 	 <latest-videos/>
 	 <comics-section/>
+	 <marvel-hq/>
+	 <Footer/>
   </div>
 </template>
 
