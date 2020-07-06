@@ -4,6 +4,7 @@
 			<h3>Sort by Year</h3>
 			<select name="year" id="year" v-model="year">
 				<option value="" hidden>Select Year</option>
+				<option value="All">All</option>
 				<option v-for="(i, index) in 51" :key="index" :value="i+1969">{{i+1969}}</option>
 			</select>
 		</div>
@@ -41,8 +42,6 @@ export default {
         this.$axios
           .$get(this.url)
           .then((res) => {
-						console.log(res.data.results.length);
-						
             if (res.data.results.length > 1) {
               res.data.results.forEach((item) => this.comics.push(item))
               $state.loaded()
@@ -61,8 +60,19 @@ mounted(){
 },
 watch:{
 	year(){
-		if(year){
-			
+		if(this.year){
+		if(	this.year === "All"){
+			this.offset = 0;
+		this.getCharacter()
+		}else{
+				this.$axios.get(`characters/1010338/comics?startYear=${this.year}&apikey=${this.apikey}`)
+			.then(res=>{
+				this.comics = res.data.data.results;
+				
+			})  .catch((err) => {
+            console.log(err)
+          })
+		}
 		}
 	}
 }
