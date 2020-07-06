@@ -1,9 +1,9 @@
 <template>
 	<div class="comics-section container">
-		<h3>RECENT COMICS</h3>
+		<h3>{{title}}</h3>
 		<div class="comics-con">
 			<div class="comics-card" v-for="(comic, index) in comics" :key="index">
-				<img :src="`${comic.thumbnail.path}.${comic.thumbnail.extension}`" alt="">
+				<img :src="`${comic.thumbnail.path}.${comic.thumbnail.extension}`" loading="lazy" width=170 alt="">
 				<p class="text-small text-bold">
 {{comic.title}}</p>
 <p class="text-tiny test-grey">{{comic.dates[0].date | luxon:format('yyyy')}}</p>
@@ -14,22 +14,14 @@
 
 <script>
 export default {
+	props:[
+		"title","comics"
+	],
 	data(){
 		return{
-			comics:[]
 		}
 	},
-methods:{
-	async getCharacter(){
-		
-		let res = await this.$axios.$get('characters/1010338/comics?apikey=6740ae373da1c47cbdc80ee83dfc9158')
-		console.log(res.data.results);
-		this.comics = res.data.results.splice(0,6);
-	}
-},
-mounted(){
-	this.getCharacter()
-}
+
 }
 </script>
 
@@ -41,6 +33,7 @@ mounted(){
 &-con{
 	display:flex;
 	justify-content: space-between;
+	flex-wrap: wrap;
 }
 &-card{
 	img{

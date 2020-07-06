@@ -35,9 +35,10 @@ export default {
   ** https://nuxtjs.org/guide/plugins
   */
   plugins: [
-		'~/plugins/fontawesome.js',
-		'~/plugins/axios.js',
-		'~/plugins/luxon.js'
+		{src:'~/plugins/fontawesome.js'},
+		{src:'~/plugins/axios.js'},
+		{src:'~/plugins/luxon.js'},
+		{ src: '~/plugins/infiniteScroll.js', ssr: false }
   ],
   /*
   ** Auto import components

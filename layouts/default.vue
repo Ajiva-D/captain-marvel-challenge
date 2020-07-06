@@ -2,6 +2,8 @@
   <div>
     <Header />
     <Nuxt />
+		<marvel-hq/>
+	 <Footer/>
   </div>
 </template>
 

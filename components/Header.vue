@@ -4,7 +4,8 @@
       <div class="name-title">
         <p>DAVID</p>
       </div>
-      <svg width="130" height="52" xmlns="http://www.w3.org/2000/svg">
+    <n-link to="/">
+			  <svg width="130" height="52" xmlns="http://www.w3.org/2000/svg">
         <rect fill="#EC1D24" width="100%" height="100%"></rect>
         <path
           fill="#FEFEFE"
@@ -16,6 +17,7 @@
           d="M31.5 48V4H21.291l-3.64 22.735L14.102 4H4v44h8V26.792L15.577 48h4.229l3.568-21.208V48z"
         ></path>
       </svg>
+		</n-link>
       <div class="master-card">
        <div> <font-awesome-icon icon="credit-card" class="icon"/></div>
         <div class="master-card-text">
@@ -28,7 +30,7 @@
 		<nav class="below-nav">
 			<a href="">VIDEOS</a>
 			<a href="">CHARACTERS</a>
-			<a href="">COMICS</a>
+			<n-link to="/comics">COMICS</n-link>
 			<a href="">MOVIES</a>
 			<a href="">TV SHOWS</a>
 			<a href="">GAMES</a>
