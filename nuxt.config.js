@@ -36,7 +36,8 @@ export default {
   */
   plugins: [
 		'~/plugins/fontawesome.js',
-		'~/plugins/axios.js'
+		'~/plugins/axios.js',
+		'~/plugins/luxon.js'
   ],
   /*
   ** Auto import components

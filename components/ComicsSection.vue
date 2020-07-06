@@ -2,11 +2,11 @@
 	<div class="comics-section container">
 		<h3>RECENT COMICS</h3>
 		<div class="comics-con">
-			<div class="comics-card" v-for="(i, index) in 6" :key="index">
-				<img src="https://i.annihil.us/u/prod/marvel/i/mg/f/70/5b2a9bf8acd74/portrait_uncanny.jpg" alt="">
+			<div class="comics-card" v-for="(comic, index) in comics" :key="index">
+				<img :src="`${comic.thumbnail.path}.${comic.thumbnail.extension}`" alt="">
 				<p class="text-small text-bold">
-Ms. Marvel (1977) #1</p>
-<p class="text-tiny test-grey">1977</p>
+{{comic.title}}</p>
+<p class="text-tiny test-grey">{{comic.dates[0].date | luxon:format('yyyy')}}</p>
 			</div>
 		</div>
 	</div>
@@ -14,11 +14,17 @@ Ms. Marvel (1977) #1</p>
 
 <script>
 export default {
+	data(){
+		return{
+			comics:[]
+		}
+	},
 methods:{
 	async getCharacter(){
-		let res = await this.$axios.$get('character/1009261')
-		console.log(res.data);
 		
+		let res = await this.$axios.$get('characters/1010338/comics?apikey=6740ae373da1c47cbdc80ee83dfc9158')
+		console.log(res.data.results);
+		this.comics = res.data.results.splice(0,6);
 	}
 },
 mounted(){
@@ -38,6 +44,9 @@ mounted(){
 }
 &-card{
 	img{
+		width:170px;
+	}
+	p{
 		width:170px;
 	}
 }
