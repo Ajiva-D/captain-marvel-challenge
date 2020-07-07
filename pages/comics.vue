@@ -1,5 +1,10 @@
 <template>
-	<main>
+	<main class="comics-page">
+			<div @click="closeModal">
+		<transition name="fade">
+				<Modal v-if="showModal" :selected="selected" />
+		</transition>
+	</div>
 		<div class="sort-con container">
 			<h3>Sort by Year</h3>
 			<select name="year" id="year" v-model="year">
@@ -8,7 +13,8 @@
 				<option v-for="(i, index) in 51" :key="index" :value="i+1969">{{i+1969}}</option>
 			</select>
 		</div>
- 	<comics-section title="ALL COMICS" :comics="comics"/>
+
+ 	<comics-section title="ALL COMICS" :comics="comics" @openModal="openModal($event)"/>
 	 <infinite-loading 
    spinner="spiral"
    @infinite="infiniteScroll"
@@ -23,7 +29,9 @@ export default {
 			comics:[],
 			offset:0,
 			apikey:'6740ae373da1c47cbdc80ee83dfc9158',
-			year:''
+			year:'',
+			showModal:false,
+			selected:{}
 		}
 	},
 	computed:{
@@ -32,6 +40,15 @@ export default {
 		}
 	},
 	methods:{
+		closeModal(){
+			this.showModal=false
+		},
+		async openModal(comic){
+			this.showModal=true
+			console.log(comic);
+			
+		this.selected = comic	
+		},
 	async getCharacter(){
 		let res = await this.$axios.$get(this.url)
 		this.comics = res.data.results;
@@ -74,12 +91,28 @@ watch:{
           })
 		}
 		}
+	},
+	showModal(){
+		console.log("watch show");
+		
+		const page = document.querySelector('body');
+		if(this.showModal){
+			page.style.height = '100vh';
+			page.style.overflow="hidden";	
+		}
+		else{
+			page.style.height = '100%';
+			page.style.overflow ="scroll";
+		}
 	}
 }
 }
 </script>
 
 <style lang="scss">
+.comics-page{
+	position: relative;
+}
 .sort-con{
 	padding-top:40px;
 	padding-bottom: 20px;
@@ -88,5 +121,15 @@ watch:{
 	select{
 		margin-left:10px;
 	}
+}
+button{
+	position: relative;
+	z-index:20;
+}
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
 }
 </style>

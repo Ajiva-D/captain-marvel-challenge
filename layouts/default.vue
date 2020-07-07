@@ -19,7 +19,9 @@ html {
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
 }
-
+body{
+	position: relative;
+}
 *,
 *::before,
 *::after {

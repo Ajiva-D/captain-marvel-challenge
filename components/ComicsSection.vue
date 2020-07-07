@@ -2,7 +2,7 @@
 	<div class="comics-section container">
 		<h3>{{title}}</h3>
 		<div class="comics-con">
-			<div class="comics-card" v-for="(comic, index) in comics" :key="index">
+			<div class="comics-card" v-for="(comic, index) in comics" :key="index" @click="openModal(index)">
 				<img :src="`${comic.thumbnail.path}.${comic.thumbnail.extension}`" loading="lazy" width=170 alt="">
 				<p class="text-small text-bold">
 {{comic.title}}</p>
@@ -21,7 +21,11 @@ export default {
 		return{
 		}
 	},
-
+	methods:{
+		openModal(i){
+			this.$emit('openModal',this.comics[i])
+		}
+	}
 }
 </script>
 
