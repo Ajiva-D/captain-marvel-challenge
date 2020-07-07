@@ -10,7 +10,7 @@
         ></path>
       </svg>
     </div>
-    <div>
+    <div class="lists-footer">
       <ul>
         <li>
           <a href="" class="text-white text-small text-bold">ABOUT MARVEL</a>
@@ -23,8 +23,6 @@
           <a href="" class="text-white text-small text-bold">INTERNSHIPS</a>
         </li>
       </ul>
-    </div>
-    <div>
       <ul>
         <li><a href="" class="text-white text-small">ADVERTISING</a></li>
         <li><a href="" class="text-white text-small">MARVELHQ.COM</a></li>
@@ -37,7 +35,7 @@
       </ul>
     </div>
     <div>
-      <div class="insider-flex">
+      <div class="insider-flex flex-1">
         <img
           src="https://terrigen-cdn-dev.marvel.com/content/prod/1x/marvel_insider-topnav-logo-large2x.png"
           alt="marvel insider logo"
@@ -49,7 +47,7 @@
           </p>
         </div>
       </div>
-      <div class="insider-flex">
+      <div class="insider-flex flex-2">
         <img
           src="https://terrigen-cdn-dev.marvel.com/content/prod/1x/mastercard-crop_0-footer-v3.png"
           alt="Captain America logo"
@@ -60,9 +58,10 @@
         </div>
       </div>
     </div>
-    <div>
+    <div class="follow-marvel">
       <p class="text-white text-small text-bold">FOLLOW MARVEL</p>
-      <ul class="social-links top">
+     <div class="social-con">
+			  <ul class="social-links top">
         <li>
           <a href="" class="text-grey"
             ><font-awesome-icon :icon="['fab','facebook-square']" class="icon"
@@ -106,6 +105,7 @@
           /></a>
         </li>
 			</ul>
+		 </div>
     </div>
 	 </div>
 	 <div class="bottom-footer">
@@ -137,6 +137,12 @@ footer {
 	  display: flex;
   align-items: flex-start;
   justify-content: space-between;
+}
+.lists-footer{
+	display: flex;
+	ul{
+		margin:0 40px;
+	}
 }
 .bottom-footer{
 	margin-top:80px;
@@ -185,5 +191,49 @@ li {
 .icon{
 	width:20px;
 	margin-right:30px;
+}
+@media screen and (max-width:767px){
+	.top-footer{
+	  display: flex;
+		flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.lists-footer{
+margin:20px 0;
+li {
+  margin-bottom: 20px;
+}
+}
+.flex-1{
+	border-top:1px solid #999;
+	padding-top:50px;
+}
+.flex-2{
+	border-bottom: 1px solid #999;
+	padding-bottom:50px;
+}
+.follow-marvel{
+	padding-top:20px;
+}
+.social-con{
+	margin-top:20px;
+	display: flex;
+	align-items: center;
+}
+.top{
+	margin-top:0px;
+}
+.bottom-footer{
+	ul{
+		display:flex;
+		justify-content: center;
+		flex-wrap:wrap;
+		padding:0 30px;
+		li{
+			margin:0 10px;
+		}
+	}
+}
 }
 </style>

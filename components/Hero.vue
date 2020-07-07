@@ -20,6 +20,13 @@
 			</div>
 		</div>
 		</div>
+		<div class="bg-black mobile">
+			<div class="container text-white">
+				<h6>CAROL DANVERS</h6>
+			<h1>CAPTAIN MARVEL</h1>
+			<p class="text-small">Carol Danvers becomes one of the universe's most powerful heroes when Earth is caught in the middle of a galactic war between two alien races.</p>
+		</div>
+		</div>
 	</div>
 </template>
 
@@ -64,5 +71,31 @@ export default {
 	.middle-tab{
 		border-left:1px solid #393939;
 	border-right:1px solid #393939;
+	}
+	.mobile{
+		display: none;
+	}
+	@media screen and (max-width:767px){
+		.hero{
+			&-description{
+			width:auto;
+		}
+		&-bg{
+				background-size: cover;
+				height:300px;
+				background-position-x:center;
+			.container{
+				display: none;
+			}
+		}
+		}
+		.tabs{
+			left:0;
+			display: none;
+		}
+		.mobile{
+			display: block;
+			padding:10px
+		}
 	}
 </style>

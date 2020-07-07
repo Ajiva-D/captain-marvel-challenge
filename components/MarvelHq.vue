@@ -34,4 +34,19 @@ export default {
 		}
 	}
 	}
+	@media screen and (max-width:767px){
+		.marvel{
+			&-hq{
+				flex-direction: column;
+				img{
+					object-fit: contain;
+				}
+			}
+				&-text-con{
+		h3{
+			width:100%;
+		}
+	}
+		}
+	}
 </style>

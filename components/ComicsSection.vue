@@ -9,6 +9,7 @@
 <p class="text-tiny test-grey">{{comic.dates[0].date | luxon:format('yyyy')}}</p>
 			</div>
 		</div>
+		<slot></slot>
 	</div>
 </template>
 

@@ -19,7 +19,7 @@
       </svg>
 		</n-link>
       <div class="master-card">
-       <div> <font-awesome-icon icon="credit-card" class="icon"/></div>
+       <div> <font-awesome-icon icon="credit-card" class="icon credit-card"/></div>
         <div class="master-card-text">
           <span>Marvel</span><br />
           <span>Mastercard®</span>
@@ -94,6 +94,11 @@ nav {
 		margin:15px 25px;
 		color:#fff;
 		text-decoration: none;
+	}
+}
+@media screen and (max-width:767px){
+	.name-title, .below-nav, .credit-card,.master-card-text{
+		display: none;
 	}
 }
 </style>

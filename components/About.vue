@@ -1,11 +1,18 @@
 <template>
+<div class="main-about">
 	<div class="about">
-		<div>
+		<div class="desktop-about">
 			<h2>CAPTAIN MARVEL</h2>
 			<p>Near death, Carol Danvers was transformed into a powerful warrior for the Kree. Now, returning to Earth years later, she must remember her past in order to to prevent a full invasion by shapeshifting aliens, the Skrulls.</p>
 			<a target="_self" class="cta-btn cta-btn--solid cta-btn--red " href="https://www.marvel.com/movies/captain-marvel"><div class="innerFill "><span>Watch Now</span></div></a>
 		</div>
 	</div>
+		<div class="mobile-about">
+			<h2>CAPTAIN MARVEL</h2>
+			<p>Near death, Carol Danvers was transformed into a powerful warrior for the Kree. Now, returning to Earth years later, she must remember her past in order to to prevent a full invasion by shapeshifting aliens, the Skrulls.</p>
+			<a target="_self" class="cta-btn cta-btn--solid cta-btn--red " href="https://www.marvel.com/movies/captain-marvel"><div class="innerFill "><span>Watch Now</span></div></a>
+		</div>
+</div>
 </template>
 
 <script>
@@ -31,6 +38,30 @@ export default {
 		line-height: 1.5;
 		letter-spacing: .5px;
 	}
+	.mobile-about{
+		display: none;
+	}
 }
-
+	@media screen and (max-width:767px){
+		.main-about{
+			background-color: #fff;
+		}
+		.about{
+			flex-direction:column;
+			/* justify-content: flex-start; */
+			padding-right:10px;
+			background-position-x: 25%;
+			height:300px;
+		}
+		.desktop-about{
+			display: none;
+		}
+		.mobile-about{
+			display: block;
+			padding:40px 20px 20px;
+			h2{
+				margin-bottom: 20px;
+			}
+		}
+	}
 </style>

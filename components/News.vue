@@ -62,4 +62,10 @@ export default {
 		width:300px;
 		margin:8px 0 10px 0;
 	}
+
+	@media screen and (max-width:767px){
+		img{
+			width:100%;
+		}
+	}
 </style>

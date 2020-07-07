@@ -53,4 +53,18 @@ box-shadow: 0 35px 54px -25px rgba(0,0,0,.4);
 		margin:10px 0;
 	}
 }
+
+	@media screen and (max-width:767px){
+		video{
+			width:100%;
+		}
+		.video{
+	&-description{
+		width:100%;
+	}
+	}
+		.thumbnail-con{
+			display: none;
+		}
+	}
 	</style>
