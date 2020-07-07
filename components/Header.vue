@@ -38,7 +38,7 @@
           <font-awesome-icon icon="times" class="icon" @click="toggleNav(false)" />
           <a href="">VIDEOS</a>
           <a href="">CHARACTERS</a>
-          <a @click="switchRoute">COMICS</a>
+          <a @click="switchRoute" href="">COMICS</a>
           <a href="">MOVIES</a>
           <a href="">TV SHOWS</a>
           <a href="">GAMES</a>
