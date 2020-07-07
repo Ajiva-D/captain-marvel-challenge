@@ -68,4 +68,9 @@ export default {
 			width:100%;
 		}
 	}
+		@media screen and (min-width:768px) and (max-width:999px)  {
+			.news-body{
+				justify-content: center;
+			}
+		}
 </style>

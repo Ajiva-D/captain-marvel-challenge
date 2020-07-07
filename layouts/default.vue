@@ -111,6 +111,11 @@ h6 {
   }
 }
 }
+	@media screen and (min-width:768px) and (max-width:999px)  {
+	.container{
+		padding:0 50px;
+	}
+	}
 /* Custom button */
 .cta-btn .innerFill {
   font: 800 14px/1 Roboto Bold, Trebuchet MS, Helvetica, Arial, sans-serif;

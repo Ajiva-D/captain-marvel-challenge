@@ -65,4 +65,12 @@ export default {
 			}
 		}
 	}
+	@media screen and (min-width:768px) and (max-width:999px)  {
+			.about{
+			/* flex-direction:column; */
+			padding-right:10px;
+			background-position-x: 25%;
+			height:300px;
+		}
+	}
 </style>

@@ -67,4 +67,9 @@ box-shadow: 0 35px 54px -25px rgba(0,0,0,.4);
 			display: none;
 		}
 	}
+		@media screen and (min-width:768px) and (max-width:999px)  {
+			.thumbnail-con{
+			display: none;
+		}
+		}
 	</style>

@@ -52,5 +52,16 @@ export default {
 h3{
 	margin-bottom:40px;
 }
-
+	@media screen and (max-width:767px){
+		.comics{
+			&-con{
+	display:flex;
+	justify-content: center;
+	/* flex-wrap: wrap; */
+}
+&-card{
+	margin:0 10px;
+}
+		}
+	}
 </style>
