@@ -1,5 +1,7 @@
 # captain-marvel-challenge
 
+**You can view the project from this [link](https://captain-marvel.netlify.app/), hosted on netlify**
+
 ## Build Setup
 
 ```bash
