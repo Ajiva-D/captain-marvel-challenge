@@ -142,7 +142,7 @@ export default {
 			}
 		},
 		switchRoute(){
-			this.toggleNav(false);
+			screen.width >= 768 ? '' : this.toggleNav(false);
 			this.$router.push('/comics')
 		}
   },
