@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="body">
     <Header />
     <Nuxt />
 		<marvel-hq/>
@@ -74,6 +74,9 @@ h6 {
 	}
 	&-red{
 		color:#e62429;
+	}
+	&-yellow{
+		color:#e8b63e;
 	}
 }
 

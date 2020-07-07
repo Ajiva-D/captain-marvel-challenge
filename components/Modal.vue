@@ -56,6 +56,9 @@ export default {
 	overflow-y: scroll;
   &-content {
     margin-left: 30px;
+		h1{
+			text-align: center;
+		}
   }
 	&-text{
 		width:600px;
@@ -80,5 +83,27 @@ img {
 h1{
 	margin-bottom:30px;
 }
-
+@media screen and (max-width:767px){
+	.modal {
+  margin: 20px;
+  padding: 40px 20px;
+  display: flex;
+	flex-direction: column;
+	overflow-y: scroll;
+  &-content {
+    margin-left: 0px;
+  }
+	&-text{
+		width:100%;
+		margin-top:20px;
+		font-size:15px;
+		padding-bottom:30px
+	}
+}
+img {
+  width: 100%;
+  height: 300px;
+  object-fit: contain;
+}
+}
 </style>

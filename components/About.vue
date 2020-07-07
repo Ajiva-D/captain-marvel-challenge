@@ -38,10 +38,11 @@ export default {
 		line-height: 1.5;
 		letter-spacing: .5px;
 	}
+
+}
 	.mobile-about{
 		display: none;
 	}
-}
 	@media screen and (max-width:767px){
 		.main-about{
 			background-color: #fff;
